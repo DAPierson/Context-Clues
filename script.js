@@ -1,42 +1,27 @@
 
-//for(let i = 1; i < 101; i++){}
-//var h3 = document.createElement('h3')
+var friends = ['dustin', 'alysia', 'will', 'joshua', 'jane'];
+var place = ['kitchen', 'bedroom', 'bathroom', 'livingroom', 'laundryroom', 'bonusroom', 'garage', 'backyard', 'frontyard', 'hallway'];
+var weapon = ['knife', 'gun', 'shovel', 'banana', 'avocado', 'car', 'poolfloat', 'beerbottle', 'hammer', 'rubber ducky', 'baby', 'wild mongoose', 'wrench', 'shark', 'stick', 'butter knife', 'shoe', 'belt', 'iron', 'candlestick'];
 
-//$(document).ready(function(){
- for (var i = 1; i < 101; i++){
-    var h3 = document.createElement('h3')
-    document.body.append(h3);
-    var text = document.createTextNode('Accusation ' + i)
-    h3.append(text)
-    function click(){
-        return  $('h3').addEventListener('click', function(){
+for (var i = 1; i < 101; i++) {
 
-            $('h3').css('color', 'red');
-        })
-    
+    var h3 = $('<h3>Acusation' + i + '</h3>').appendTo(document.body);
+
+    $(h3).click(greeter(i))
+}
+
+function greeter(i) {
+
+    return function () {
+
+        alert('I accuse ' + friends[i % friends.length] + ' with the ' + weapon[i % weapon.length] + ' in the ' + place[i % place.length]);
 
 
     }
- }
- let clicked = click();
-
- clicked();
-  
-//  $('h3').addEventListener('click', function(){
-
-//     $('h3').css('color', 'red');
-// })
+}
 
 
- 
 
-//})
 
-//$('h3').addEventListener('click', function(){
 
-//$(h3).css('color', 'red')
-//}
-    
-//)
 
- 
