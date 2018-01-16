@@ -14,12 +14,11 @@ function greeter(i) {
 
     return function () {
 
-        alert('I accuse ' + friends[i % friends.length] + ' with the ' + weapon[i % weapon.length] + ' in the ' + place[i % place.length]);
+        alert('Accusation ' + i + ':' + 'I accuse ' + friends[i % friends.length] + ' with the ' + weapon[i % weapon.length] + ' in the ' + place[i % place.length]);
 
 
     }
 }
-
 
 
 
